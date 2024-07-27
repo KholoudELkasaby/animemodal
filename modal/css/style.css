@@ -1,0 +1,82 @@
+body{
+    background-color: #010326;
+}
+
+.item{
+    cursor: pointer;
+}
+
+.item-caption{
+   
+    background-color: #fff;
+    position: absolute;
+    bottom: 10px;
+    left: 15%;
+    width: 70%;
+    padding: 2px;
+    text-align: center;
+    display: none;
+    height: 70px;
+    
+    
+
+}
+@keyframes fade-up{
+    0%{
+      opacity: 0;
+      transform: translateY(20px) scale(0.9);
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0px) scale(1);
+    }
+  }
+.item:hover .item-caption{
+   display: block;
+   animation: fade-up 0.9s;
+   
+  
+}
+
+img{
+    height: 350px;
+}
+
+#lightBoxContainer{
+    display:none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color:rgba(0, 0, 0, 0.4) ;
+    z-index: 99999 ;
+}
+
+#lightBox{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70vh;
+    width: 50%;
+    background-image:url(../images/suguru.jpg) ;
+    background-size: cover;
+    background-position: center center;
+}
+
+i{
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+#close{
+    position: absolute;
+    top: 0;
+    right:0;
+
+}
